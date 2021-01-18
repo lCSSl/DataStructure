@@ -1,0 +1,45 @@
+server:
+  port: 8899
+spring:
+  application:
+    name: datastructure-dev
+  cloud:
+    #注册进nacos
+    nacos:
+      discovery:
+        server-addr: 47.103.204.249:8848 #注册中心地址
+#配置mapper文件
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  page:
+    helperDialect: mysql
+    countSql: true
+    reasonable: true
+    pageSizeZero: false
+#openFeign配置
+feign:
+  httpclient:
+    connection-timeout: 60000
+    enabled: true
+  sentinel:
+    enabled: true
+  hystrix:
+    enabled: false
+  client:
+    config:
+      default:
+        connectTimeout: 60000
+        readTimeout: 60000
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+
+#日志级别
+logging:
+  level: info
+#暴露端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
