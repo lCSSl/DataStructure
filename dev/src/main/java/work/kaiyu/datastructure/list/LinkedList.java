@@ -17,6 +17,7 @@ public class LinkedList<E> extends AbstractList<E> {
     public void add(int index, E element) {
         if (index == 0) {
             firstNode = new Node<>(element, firstNode);
+//            firstNode = new Node<>(element, null);
         } else {
             Node<E> prev = node(index - 1);
             prev.next = new Node<>(element, prev.next);
