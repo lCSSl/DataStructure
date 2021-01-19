@@ -7,13 +7,15 @@ import lombok.*;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class Person {
-    private String name;
-    private int age;
+public class Student extends Person {
+
+    private String no;
+    private String school;
+    private int grade;
 
     @Override
     protected void finalize() throws Throwable {
-        System.out.println(this.getClass().getSimpleName()+"--finalize");
+        System.out.println(this.getClass().getSimpleName() + "--finalize");
         super.finalize();
     }
 }

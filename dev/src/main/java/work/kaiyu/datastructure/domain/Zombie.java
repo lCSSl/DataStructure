@@ -7,9 +7,9 @@ import lombok.*;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class Person {
-    private String name;
-    private int age;
+public class Zombie {
+
+    private int power;
 
     @Override
     protected void finalize() throws Throwable {
