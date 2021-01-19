@@ -5,12 +5,6 @@ public interface List<E> {
     int DEFAULT_CAPACITY = 2;
     int ELEMENT_NOT_FOUND = -1;
     int MAX_ARRAY_SIZE = Integer.MAX_VALUE - 8;
-    /**
-     * 增加
-     *
-     * @param element
-     */
-    void add(E element);
 
     /**
      * 当前位置增加一个元素

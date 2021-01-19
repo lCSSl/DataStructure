@@ -37,7 +37,7 @@ public class TestList {
         LinkedList<Person> list = new LinkedList<>();
         list.add(new Person("a", 1));
         list.add(new Person("b", 2));
-        list.add(null);
+//        list.add(null);
         list.add(new Person("c", 3));
         list.add(new Person("d", 4));
         list.add(new Person("e", 5));
