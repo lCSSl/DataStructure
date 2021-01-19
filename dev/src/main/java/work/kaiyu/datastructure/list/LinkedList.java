@@ -60,8 +60,8 @@ public class LinkedList<E> extends AbstractList<E> {
 
     @Override
     public int indexOf(E element) {
+        Node<E> node = firstNode;
         if (element == null) {
-            Node<E> node = firstNode;
             for (int i = 0; i < this.size; i++) {
                 if (node.element == null) {
                     return i;
@@ -69,13 +69,8 @@ public class LinkedList<E> extends AbstractList<E> {
                 node = node.next;
             }
         } else {
-            Node<E> node = firstNode;
             for (int i = 0; i < size; i++) {
-                if (node.next.element == null) {
-                    if (node.next.element == element) {
-                        return i;
-                    }
-                } else {
+                if (node.next.element != null) {
                     if (node.next.element.equals(element)) {
                         return i;
                     }
