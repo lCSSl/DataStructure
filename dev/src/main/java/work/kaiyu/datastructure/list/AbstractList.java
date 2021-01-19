@@ -2,6 +2,11 @@ package work.kaiyu.datastructure.list;
 
 public abstract class AbstractList<E> implements List<E>{
     protected int size = 0;
+    @Override
+    public void add(E element) {
+        add(this.size, element);
+    }
+
     public int size() {
         return this.size;
     }

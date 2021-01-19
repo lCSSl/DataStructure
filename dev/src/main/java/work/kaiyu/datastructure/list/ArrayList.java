@@ -30,10 +30,6 @@ public class ArrayList<E> extends AbstractList<E> {
      *
      * @param element
      */
-    @Override
-    public void add(E element) {
-        add(size, element);
-    }
 
     /**
      * 当前位置增加一个元素

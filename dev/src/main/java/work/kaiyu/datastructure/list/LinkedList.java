@@ -1,7 +1,6 @@
 package work.kaiyu.datastructure.list;
 
-public class LinkedList<E> implements List<E> {
-    private int size = 0;
+public class LinkedList<E> extends AbstractList<E> {
     private Node<E> firstNode;
 
     private static class Node<E> {
@@ -14,20 +13,21 @@ public class LinkedList<E> implements List<E> {
         }
     }
 
-
-    @Override
-    public void add(E element) {
-        add(size, element);
-    }
-
     @Override
     public void add(int index, E element) {
-
+        if (index == 0) {
+            firstNode = new Node<>(element, firstNode);
+        } else {
+            Node<E> prev = node(index - 1);
+            prev.next = new Node<>(element, prev.next);
+        }
+        size++;
     }
 
     @Override
     public void clear() {
-
+        this.size = 0;
+        firstNode = null;
     }
 
     @Override
@@ -37,12 +37,15 @@ public class LinkedList<E> implements List<E> {
 
     @Override
     public E set(int index, E element) {
-        return null;
+        Node<E> node = node(index);
+        E old = node.element;
+        node.element = element;
+        return old;
     }
 
     @Override
     public E get(int index) {
-        return null;
+        return node(index).element;
     }
 
     @Override
@@ -50,4 +53,28 @@ public class LinkedList<E> implements List<E> {
         return 0;
     }
 
+    private Node<E> node(int index) {
+        rangeCheck(index);
+        Node<E> node = firstNode;
+        for (int i = 0; i < index; i++) {
+            node = node.next;
+        }
+        return node;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.getClass().getSimpleName());
+        sb.append(":[");
+        for (int i = 0; i < size; i++) {
+            if (i != 0) {
+                sb.append(", ");
+            }
+            sb.append(firstNode.element);
+            firstNode = firstNode.next;
+        }
+        sb.append("]");
+        return sb.toString();
+    }
 }
