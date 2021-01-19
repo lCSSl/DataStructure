@@ -33,7 +33,16 @@ public class LinkedList<E> extends AbstractList<E> {
 
     @Override
     public E remove(int index) {
-        return null;
+        Node<E> node = firstNode;
+        if (index == 0) {
+            firstNode = firstNode.next;
+        } else {
+            Node<E> prev = node(index - 1);
+            node = prev.next;
+            prev.next = prev.next.next;
+        }
+        this.size--;
+        return node.element;
     }
 
     @Override
@@ -51,7 +60,32 @@ public class LinkedList<E> extends AbstractList<E> {
 
     @Override
     public int indexOf(E element) {
-        return 0;
+        if (element == null) {
+            Node<E> node = firstNode;
+            for (int i = 0; i < this.size; i++) {
+                if (node.element == null) {
+                    return i;
+                }
+                node = node.next;
+            }
+        } else {
+            Node<E> node = firstNode;
+            for (int i = 0; i < size; i++) {
+                if (node.next.element == null) {
+                    if (node.next.element == element) {
+                        return i;
+                    }
+                } else {
+                    if (node.next.element.equals(element)) {
+                        return i;
+                    }
+                }
+                node = node.next;
+            }
+
+        }
+
+        return ELEMENT_NOT_FOUND;
     }
 
     private Node<E> node(int index) {

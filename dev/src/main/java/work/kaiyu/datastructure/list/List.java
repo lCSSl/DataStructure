@@ -1,9 +1,10 @@
 package work.kaiyu.datastructure.list;
 
 public interface List<E> {
-    static final  int DEFAULT_CAPACITY = 2;
-    static final  int ELEMENT_NOT_FOUND = -1;
-    static final  int MAX_ARRAY_SIZE = Integer.MAX_VALUE - 8;
+
+    int DEFAULT_CAPACITY = 2;
+    int ELEMENT_NOT_FOUND = -1;
+    int MAX_ARRAY_SIZE = Integer.MAX_VALUE - 8;
 
     /**
      * 增加
@@ -52,6 +53,5 @@ public interface List<E> {
      * @return
      */
     int indexOf(E element);
-
 
 }

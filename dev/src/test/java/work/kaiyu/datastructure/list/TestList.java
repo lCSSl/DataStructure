@@ -55,6 +55,7 @@ public class TestList {
 //        System.out.println(i);
 //        Person[] people = new Person[2];
         log.error("list:{}", list);
+//        list.remove(list.indexOf(null));
     }
     @Test
     public void toDoTList() {
