@@ -32,9 +32,10 @@ public class TestList {
         Person[] people = new Person[2];
         log.error("list:{}", list);
     }
+
     @Test
     public void functionLinkedListTest() {
-        LinkedList<Person> list = new LinkedList<>();
+        LinkedListX<Person> list = new LinkedListX<>();
         list.add(new Person("a", 1));
         list.add(new Person("b", 2));
 //        list.add(null);
@@ -54,9 +55,10 @@ public class TestList {
 //        int i = list.indexOf(null);
 //        System.out.println(i);
 //        Person[] people = new Person[2];
+        list.clear();
         log.error("list:{}", list);
-        list.remove(list.indexOf(null));
     }
+
     @Test
     public void toDoTList() {
     }
