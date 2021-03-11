@@ -1,5 +1,7 @@
-package work.kaiyu.datastructure.leetcode.链表;
+package work.kaiyu.datastructure.leetcode;
 
+
+import work.kaiyu.datastructure.leetcode.链表.ListNode;
 
 /**
  * @author: hamster

@@ -1,6 +1,7 @@
-package work.kaiyu.datastructure.leetcode.链表;
+package work.kaiyu.datastructure.leetcode;
 
 import lombok.extern.slf4j.Slf4j;
+import work.kaiyu.datastructure.leetcode.链表.ListNode;
 
 /**
  * @author: hamster

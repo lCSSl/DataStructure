@@ -1,4 +1,4 @@
-package work.kaiyu.datastructure.leetcode.其他;
+package work.kaiyu.datastructure.leetcode;
 
 /**
  * @author: hamster

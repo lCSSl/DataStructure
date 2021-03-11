@@ -2,7 +2,6 @@ package work.kaiyu.datastructure.leetcode;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
-import work.kaiyu.datastructure.leetcode.其他._299_猜数字游戏;
 
 /**
  * @author: hamster

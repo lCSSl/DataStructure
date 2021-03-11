@@ -3,7 +3,7 @@ package work.kaiyu.datastructure.list;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import work.kaiyu.datastructure.leetcode.链表.ListNode;
-import work.kaiyu.datastructure.leetcode.链表._203_移除链表元素;
+import work.kaiyu.datastructure.leetcode._203_移除链表元素;
 
 @Slf4j
 public class Solve {
